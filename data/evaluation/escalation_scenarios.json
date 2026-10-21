@@ -1,0 +1,12 @@
+[
+  {"name":"conflicting_dns_http","expected_escalation":true,"expected_reason":"conflicting_evidence"},
+  {"name":"missing_support_documentation","expected_escalation":true,"expected_reason":"no_relevant_rag_evidence"},
+  {"name":"dns_timeout","expected_escalation":true,"expected_reason":"dns_failure_blocked_downstream_diagnostics"},
+  {"name":"ssl_tool_failure","expected_escalation":true,"expected_reason":"required_diagnostic_tool_failed"},
+  {"name":"http_timeout","expected_escalation":true,"expected_reason":"required_diagnostic_tool_failed"},
+  {"name":"low_retrieval_relevance","expected_escalation":true,"expected_reason":"confidence_below_threshold"},
+  {"name":"llm_provider_failure","expected_escalation":true,"expected_reason":"llm_generation_failed_or_skipped"},
+  {"name":"unsupported_issue","expected_escalation":true,"expected_reason":"unsupported_or_unknown_issue"},
+  {"name":"clear_documentation_issue","expected_escalation":false,"expected_reason":null},
+  {"name":"ambiguous_root_cause","expected_escalation":true,"expected_reason":"conflicting_evidence"}
+]

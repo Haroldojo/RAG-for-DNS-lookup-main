@@ -1,0 +1,14 @@
+[
+  {"query":"How do I create a CNAME record?", "domain":null, "expected_intent":"documentation_question", "expected_route":"rag_only"},
+  {"query":"What is an A record?", "domain":null, "expected_intent":"documentation_question", "expected_route":"rag_only"},
+  {"query":"Explain nameserver delegation", "domain":null, "expected_intent":"documentation_question", "expected_route":"rag_only"},
+  {"query":"My domain is not resolving after I changed nameservers", "domain":"example.com", "expected_intent":"dns_issue", "expected_route":"dns_and_rag"},
+  {"query":"DNS propagation is taking too long", "domain":"example.com", "expected_intent":"dns_issue", "expected_route":"dns_and_rag"},
+  {"query":"I cannot resolve my domain", "domain":"example.com", "expected_intent":"dns_issue", "expected_route":"dns_and_rag"},
+  {"query":"My CNAME record failed", "domain":"example.com", "expected_intent":"dns_issue", "expected_route":"dns_and_rag"},
+  {"query":"The nameserver changed and the site is broken", "domain":"example.com", "expected_intent":"dns_issue", "expected_route":"dns_and_rag"},
+  {"query":"Please help", "domain":null, "expected_intent":"unknown", "expected_route":"fallback_rag"},
+  {"query":"Hello", "domain":null, "expected_intent":"unknown", "expected_route":"fallback_rag"},
+  {"query":"My website is weird", "domain":null, "expected_intent":"unknown", "expected_route":"fallback_rag"},
+  {"query":"Domain not working", "domain":"not a domain", "expected_intent":"dns_issue", "expected_route":"fallback_rag"}
+]

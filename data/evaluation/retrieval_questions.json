@@ -1,0 +1,12 @@
+[
+  {"query":"What does DNS do?", "expected_document_id":"dns-basics-v1"},
+  {"query":"Why is my DNS change not visible yet?", "expected_document_id":"dns-basics-v1"},
+  {"query":"Where do I change nameservers after moving hosting?", "expected_document_id":"nameserver-troubleshooting-v1"},
+  {"query":"How long can nameserver propagation take?", "expected_document_id":"nameserver-troubleshooting-v1"},
+  {"query":"When should I use an A record?", "expected_document_id":"a-cname-records-v1"},
+  {"query":"Can www use a CNAME record?", "expected_document_id":"a-cname-records-v1"},
+  {"query":"My browser says the SSL certificate is invalid", "expected_document_id":"ssl-issues-v1"},
+  {"query":"Why did my certificate validation fail?", "expected_document_id":"ssl-issues-v1"},
+  {"query":"What should I check for a 500 internal server error?", "expected_document_id":"hosting-errors-v1"},
+  {"query":"What causes a 503 service unavailable error?", "expected_document_id":"hosting-errors-v1"}
+]

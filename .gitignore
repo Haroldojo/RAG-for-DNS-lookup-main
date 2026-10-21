@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+*.env
+*.db
+*.sqlite
+*.sqlite3
+*.log
+data/evaluation/reports/
+*.py[cod]
+coverage.xml
+htmlcov/
+.env
+

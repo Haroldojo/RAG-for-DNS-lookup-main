@@ -1,0 +1,12 @@
+[
+  {"scenario":"Valid domain with A record", "domain":"example.com", "expected_status":"ok"},
+  {"scenario":"Domain with IPv6 address", "domain":"ipv6.example", "expected_status":"ok"},
+  {"scenario":"CNAME alias inspection", "domain":"www.example.com", "expected_status":"ok"},
+  {"scenario":"Mail exchanger lookup", "domain":"mail.example.com", "expected_status":"ok"},
+  {"scenario":"Nameserver delegation lookup", "domain":"example.com", "expected_status":"ok"},
+  {"scenario":"TXT verification lookup", "domain":"verify.example.com", "expected_status":"ok"},
+  {"scenario":"Malformed domain rejected", "domain":"https://example.com", "expected_status":"invalid_domain"},
+  {"scenario":"Domain does not exist", "domain":"missing.example", "expected_status":"nxdomain"},
+  {"scenario":"Resolver timeout", "domain":"slow.example", "expected_status":"resolver_failure"},
+  {"scenario":"Existing domain missing MX", "domain":"nomx.example", "expected_status":"ok"}
+]

@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentic-dns-hosting-support-copilot"
+version = "0.1.0"
+description = "Evidence-grounded support copilot for DNS, SSL, hosting, and website-access issues."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "httpx>=0.27,<1.0",
+  "dnspython>=2.7,<3.0",
+  "fastembed>=0.4,<1.0",
+  "langgraph>=0.2,<2.0",
+  "groq>=0.15,<2.0",
+  "pydantic-settings>=2.6,<3.0",
+  "pypdf>=5.0,<7.0",
+  "qdrant-client>=1.12,<2.0",
+  "redis>=5.2,<7.0",
+  "sqlalchemy>=2.0,<3.0",
+  "alembic>=1.13,<2.0",
+  "psycopg[binary]>=3.2,<4.0",
+  "uvicorn[standard]>=0.32,<1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.27,<1.0",
+  "pytest>=8.3,<9.0",
+  "pytest-asyncio>=0.24,<1.0",
+  "ruff>=0.8,<1.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# FastAPI intentionally declares dependencies with Depends(...) defaults.
+ignore = ["B008"]
+

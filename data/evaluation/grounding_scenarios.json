@@ -1,0 +1,12 @@
+[
+  {"scenario":"Documentation answer grounded in A-record source", "kind":"documentation"},
+  {"scenario":"Documentation answer retains application citation", "kind":"citation"},
+  {"scenario":"DNS answer includes only tool-derived record", "kind":"dns_success"},
+  {"scenario":"DNS resolver failure escalates", "kind":"dns_failure"},
+  {"scenario":"No retrieval evidence returns uncertainty", "kind":"no_evidence"},
+  {"scenario":"Missing API key returns safe fallback", "kind":"missing_key"},
+  {"scenario":"Provider timeout returns safe fallback", "kind":"timeout"},
+  {"scenario":"Provider rate limit returns safe fallback", "kind":"rate_limit"},
+  {"scenario":"Empty provider response returns safe fallback", "kind":"empty_response"},
+  {"scenario":"Unknown query retains escalation", "kind":"unknown"}
+]

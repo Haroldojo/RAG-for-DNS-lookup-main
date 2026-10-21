@@ -1,0 +1,22 @@
+[
+  {"name":"missing_a_record","intent":"dns_issue","tools":["dns_check","search_support_docs"],"skipped":[],"escalate":false},
+  {"name":"nameserver_misconfiguration","intent":"dns_issue","tools":["dns_check","search_support_docs"],"skipped":[],"escalate":false},
+  {"name":"dns_nxdomain","intent":"dns_issue","tools":["dns_check","search_support_docs"],"skipped":[],"escalate":true},
+  {"name":"dns_timeout","intent":"dns_issue","tools":["dns_check","search_support_docs"],"skipped":[],"escalate":true},
+  {"name":"expired_certificate","intent":"ssl_issue","tools":["dns_check","ssl_check","search_support_docs"],"skipped":[],"escalate":false},
+  {"name":"hostname_certificate_mismatch","intent":"ssl_issue","tools":["dns_check","ssl_check","search_support_docs"],"skipped":[],"escalate":false},
+  {"name":"not_yet_valid_certificate","intent":"ssl_issue","tools":["dns_check","ssl_check","search_support_docs"],"skipped":[],"escalate":false},
+  {"name":"tls_timeout","intent":"ssl_issue","tools":["dns_check","ssl_check","search_support_docs"],"skipped":[],"escalate":true},
+  {"name":"http_200","intent":"website_down","tools":["dns_check","http_check","search_support_docs"],"skipped":[],"escalate":false},
+  {"name":"http_redirect","intent":"website_down","tools":["dns_check","http_check","search_support_docs"],"skipped":[],"escalate":false},
+  {"name":"http_403","intent":"hosting_issue","tools":["http_check","search_support_docs"],"skipped":[],"escalate":false},
+  {"name":"http_404","intent":"hosting_issue","tools":["http_check","search_support_docs"],"skipped":[],"escalate":false},
+  {"name":"http_500","intent":"hosting_issue","tools":["http_check","search_support_docs"],"skipped":[],"escalate":false},
+  {"name":"http_502","intent":"website_down","tools":["dns_check","http_check","search_support_docs"],"skipped":[],"escalate":true},
+  {"name":"http_503","intent":"website_down","tools":["dns_check","http_check","search_support_docs"],"skipped":[],"escalate":true},
+  {"name":"http_504","intent":"website_down","tools":["dns_check","http_check","search_support_docs"],"skipped":[],"escalate":true},
+  {"name":"redirect_loop","intent":"website_down","tools":["dns_check","http_check","search_support_docs"],"skipped":[],"escalate":true},
+  {"name":"dns_blocks_http","intent":"website_down","tools":["dns_check","search_support_docs"],"skipped":["http_check"],"escalate":true},
+  {"name":"dns_ok_ssl_ok_http_503","intent":"website_down","tools":["dns_check","http_check","search_support_docs"],"skipped":[],"escalate":true},
+  {"name":"unknown_question","intent":"unknown","tools":["search_support_docs"],"skipped":[],"escalate":true}
+]

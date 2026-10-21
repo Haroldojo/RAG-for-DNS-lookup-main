@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -e '.[dev]'
+      - name: Ruff formatting
+        run: python -m ruff format --check .
+      - name: Ruff lint
+        run: python -m ruff check .
+      - name: Tests
+        run: python -m pytest -q
+      - name: Phase 11 regression evaluation
+        run: python -m app.evaluation.run_full_evaluation
+      - name: Phase 12 security evaluation
+        run: python -m app.evaluation.run_security_evaluation
+      - name: Docker build
+        run: docker build --tag support-copilot:ci .
